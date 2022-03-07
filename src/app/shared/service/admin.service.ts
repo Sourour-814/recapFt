@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, Observable, tap } from 'rxjs';
+import { catchError, Observable, of, tap } from 'rxjs';
 import { Admin } from '../model/admin';
 
 @Injectable({
@@ -41,5 +41,8 @@ export class AdminService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
+  }
+  log(arg0: string) {
+    throw new Error('Method not implemented.');
   }
 }
